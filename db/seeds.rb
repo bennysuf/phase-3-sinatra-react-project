@@ -1,8 +1,8 @@
 puts "🌱 Seeding spices..."
 
-User.create(username: "bennysuf", name: "Benny", password: "bennysuf00")
-User.create(username: "stevie", name: "Steve", password: "wonderer")
-User.create(username: "boburt", name: "Bob", password: "bobsworld")
+User.create(username: "Benny", password: "bennysuf00")
+User.create(username: "Steve", password: "wonderer")
+User.create(username: "Bob", password: "bobsworld")
 
 # Message.create([
 #   {
