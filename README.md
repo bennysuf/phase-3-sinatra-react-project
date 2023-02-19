@@ -22,5 +22,4 @@
    To quit the server, press CTRL + C.
 
 **To go to the frontend**
-
 [Link to Frontend](https://github.com/bennysuf/twidler-frontend)
