@@ -17,9 +17,9 @@
 `$ bundle exec rake server`
 
 
-   This will start up the Backend server
+   This will start up the Backend server.
 
-   To quit the server, press CTRL + C
+   To quit the server, press CTRL + C.
 
 **To go to the frontend**
 
