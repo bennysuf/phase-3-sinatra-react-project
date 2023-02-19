@@ -1,6 +1,6 @@
 puts "🌱 Seeding spices..."
 
-User.create(username: "Benny", password: "bennysuf00")
+User.create(username: "Benny", password: "benny00")
 User.create(username: "Steve", password: "wonderer")
 User.create(username: "Bob", password: "bobsworld")
 User.create(username: "Tarzan", password: "jungleman")
