@@ -41,12 +41,6 @@ class ApplicationController < Sinatra::Base
     post.to_json
   end
 
-  get "/posts/:id" do
-    user = User.find(params[:id])
-    user.to_json(include: [:posts])
-  end
-
-
   post "/posts" do 
     post = Post.create(
       user_id: params[:user_id],
