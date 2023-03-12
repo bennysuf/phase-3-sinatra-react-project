@@ -32,7 +32,7 @@ class ApplicationController < Sinatra::Base
 
   get "/user/:id" do
     user = User.find(params[:id])
-    user.to_json
+    user.to_json(only: [:username])
   end
 
   # POST
@@ -43,7 +43,7 @@ class ApplicationController < Sinatra::Base
 
   get "/posts/:id" do
     user = User.find(params[:id])
-    user.posts.all.to_json
+    user.to_json(include: [:posts])
   end
 
 
@@ -64,8 +64,9 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/current-user" do 
-    user = CurrentUser.all
-    user.to_json
+    current = CurrentUser.first
+    user = User.find(current.user_id)
+    user.to_json(include: [:posts])
   end
 
   delete "/current-user" do 
