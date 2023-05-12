@@ -1,5 +1,6 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
+
   
   # USER 
   get "/login" do
@@ -59,8 +60,13 @@ class ApplicationController < Sinatra::Base
 
   get "/current-user" do 
     current = CurrentUser.first
-    user = User.find(current.user_id)
-    user.to_json(include: [:posts])
+    if !current
+      error = {error: "Error"}
+      error.to_json
+    else 
+      user = User.find(current.user_id)
+      user.to_json(include: [:posts])
+    end
   end
 
   delete "/current-user" do 
